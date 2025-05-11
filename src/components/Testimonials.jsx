@@ -11,11 +11,11 @@ const testimonials = [
         role: "Freelancer",
         quote: "The valuation was fair and payment was instant. Highly recommend their service.",
     },
-    {
-        name: "Kiran M.",
-        role: "Founder, Sneek.com",
-        quote: "They turned old tools into cash effortlessly. Smooth process from start to finish.",
-    },
+    // {
+    //     name: "Kiran M.",
+    //     role: "Founder, Sneek.com",
+    //     quote: "They turned old tools into cash effortlessly. Smooth process from start to finish.",
+    // },
 ];
 
 const bubbleVariants = {
