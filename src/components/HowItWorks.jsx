@@ -21,9 +21,9 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="bg-gray-900 text-white min-h-screen flex flex-col justify-center gap-24 items-center px-4">
+        <section className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center px-4 py-16">
             <motion.h2
-                className="text-6xl font-bold text-white mb-10"
+                className="text-4xl sm:text-5xl font-bold text-white mb-16 text-center"
                 initial={{ opacity: 0, y: -40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -31,11 +31,11 @@ export default function HowItWorks() {
                 How It Works
             </motion.h2>
 
-            <div className="flex items-center justify-center space-x-6 md:space-x-12 relative">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
                 {steps.map((step, index) => (
-                    <div key={index} className="flex items-center">
+                    <div key={index} className="flex flex-col md:flex-row items-center">
                         <motion.div
-                            className="bg-white text-gray-900 rounded-2xl px-8 py-10 w-[280px] h-[240px] shadow-xl hover:scale-105 transition flex flex-col justify-center"
+                            className="bg-white text-gray-900 rounded-2xl px-6 py-10 w-full max-w-sm shadow-xl hover:scale-105 transition flex flex-col justify-center"
                             initial={{ opacity: 0, x: -100, scale: 1.2 }}
                             whileInView={{ opacity: 1, x: 0, scale: 1 }}
                             transition={{
@@ -48,20 +48,14 @@ export default function HowItWorks() {
                                 ease: "easeInOut",
                             }}
                         >
-                            <div className="flex justify-center mb-4">
-                                {step.icon}
-                            </div>
-                            <h3 className="text-xl font-semibold text-center mb-2">
-                                {step.title}
-                            </h3>
-                            <p className="text-sm text-center text-gray-600">
-                                {step.description}
-                            </p>
+                            <div className="flex justify-center mb-4">{step.icon}</div>
+                            <h3 className="text-xl font-semibold text-center mb-2">{step.title}</h3>
+                            <p className="text-sm text-center text-gray-600">{step.description}</p>
                         </motion.div>
 
                         {index < steps.length - 1 && (
                             <motion.div
-                                className="mx-4"
+                                className="my-6 md:my-0 md:mx-4"
                                 initial={{ opacity: 0, scale: 3, x: -100 }}
                                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                                 transition={{
@@ -70,11 +64,11 @@ export default function HowItWorks() {
                                 }}
                             >
                                 <svg
-                                    width="48"
-                                    height="48"
+                                    width="32"
+                                    height="32"
                                     viewBox="0 0 24 24"
                                     fill="none"
-                                    className="text-white opacity-60"
+                                    className="text-white opacity-60 rotate-90 md:rotate-0"
                                 >
                                     <path
                                         d="M5 12h14m0 0l-4-4m4 4l-4 4"
