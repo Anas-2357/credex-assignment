@@ -19,7 +19,8 @@ export default function ContactForm() {
     const validate = () => {
         const newErrors = {};
         if (!form.name.trim()) newErrors.name = "Name is required";
-        if (!form.email || !/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "Valid email required";
+        if (!form.email || !/\S+@\S+\.\S+/.test(form.email))
+            newErrors.email = "Valid email required";
         if (!form.license) newErrors.license = "Select a license type";
         if (!form.message.trim()) newErrors.message = "Message is required";
         return newErrors;
