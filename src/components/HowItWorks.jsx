@@ -36,16 +36,16 @@ export default function HowItWorks() {
                     <div key={index} className="flex items-center">
                         <motion.div
                             className="bg-white text-gray-900 rounded-2xl px-8 py-10 w-[280px] h-[240px] shadow-xl hover:scale-105 transition flex flex-col justify-center"
-                            initial={{ opacity: 0, x: -300, scale: 0.1 }}
+                            initial={{ opacity: 0, x: -100, scale: 1.2 }}
                             whileInView={{ opacity: 1, x: 0, scale: 1 }}
                             transition={{
                                 opacity: {
-                                    delay: index * 0.45,
+                                    delay: index * 0.45 + 0.25,
                                     duration: 0.7,
                                 },
-                                duration: 0.4,
+                                duration: 0.9,
                                 delay: index * 0.45,
-                                ease: "anticipate",
+                                ease: "easeInOut",
                             }}
                         >
                             <div className="flex justify-center mb-4">
@@ -62,10 +62,10 @@ export default function HowItWorks() {
                         {index < steps.length - 1 && (
                             <motion.div
                                 className="mx-4"
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
+                                initial={{ opacity: 0, scale: 3, x: -100 }}
+                                whileInView={{ opacity: 1, scale: 1, x: 0 }}
                                 transition={{
-                                    delay: index * 0.15 + 1.5,
+                                    delay: index * 0.4 + 1.5,
                                     duration: 0.5,
                                 }}
                             >
