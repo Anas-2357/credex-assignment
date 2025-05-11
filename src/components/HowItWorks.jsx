@@ -21,7 +21,7 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center px-4 py-16">
+        <section className="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center md:gap-16 px-4 py-16">
             <motion.h2
                 className="text-4xl sm:text-5xl font-bold text-white mb-16 text-center"
                 initial={{ opacity: 0, y: -40 }}
