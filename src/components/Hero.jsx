@@ -19,14 +19,19 @@ function Hero() {
                     SoftSell helps companies get value back from unused software
                     — fast, secure, and hassle-free.
                 </p>
-                <motion.a
-                    href="#contact"
+                <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="inline-block mt-8 px-6 py-3 bg-white text-gray-900 rounded-full font-medium shadow-lg hover:bg-orange-200 transition"
+                    onClick={() => {
+                        window.scrollTo({
+                            top: document.body.scrollHeight,
+                            behavior: "smooth",
+                        });
+                    }}
                 >
                     Get a Free Quote →
-                </motion.a>
+                </motion.button>
             </motion.div>
         </section>
     );
